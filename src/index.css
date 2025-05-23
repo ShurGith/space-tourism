@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.active {
+  @apply border-b-4 border-white;
+}

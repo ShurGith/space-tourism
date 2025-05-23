@@ -1,15 +1,21 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import Home from "./Components/Home"
+import Crew from "./Components/Crew"
+import Destination from "./Components/Destination"
+import Tecnology from "./Components/Tecnology"
+import Header from "./Components/Header"
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/about" element={<h1>About</h1>} />
-          <Route path="/contact" element={<h1>Contact</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/crew" element={<Crew />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/tecnology" element={<Tecnology />} />
         </Routes>
       </BrowserRouter>
     </>
