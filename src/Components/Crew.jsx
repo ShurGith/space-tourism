@@ -44,22 +44,23 @@ function Crew() {
   }
 
   return (
-    <div className='h-dvh flex justify-center lg:flex-row lg:justify-around w-full margin-auto items-center bg-no-repeat bg-cover
+    <div className='min-h-dvh relative flex justify-center lg:flex-row lg:justify-around w-full margin-auto items-center bg-no-repeat bg-cover
     bg- top' style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div className='flex flex-col-reverse relative items-center justify-center lg:grid lg:grid-cols-5 gap-12 lg:place-items-center ' >
-        <div className='flex flex-col pl-30 col-span-3 items-start max-w-fit gap-20'>
-          <h2 className='text-white pb-24 font-extralight text-center mb-6 text-xl tracking-[2.7px]'>
-            <span className='font-bold text-white/30 mr-6'>02</span>
+      <div className='flex flex-col-reverse  items-center justify-center lg:grid lg:grid-cols-5 gap-12 lg:place-items-center ' >
+        <div className='flex flex-col px-4 lg:pl-30 col-span-3 items-start max-w-fit gap-9'>
+          <h2 className='text-white lg:pb-24 font-extralight text-center lg:mb-6 text-xl tracking-[2.7px]'>
+            <span className='font-bold text-white/30 lg:mr-6'>02</span>
             MEET YOUR CREW
           </h2>
-          <div className='flex flex-col gap-6 '>
+          <div className='flex flex-col lg:gap-6 '>
             <span className='font-space text-white/60 text-2xl uppercase'>{crews[index].role}</span>
-            <h2 className='font-space pl-12 lg:pl-0 mt-10 lg:mt-0 text-white uppercase text-center text-3xl lg:text-6xl'>{crews[index].name}</h2>
+            <h2 className='font-space lg:pl-0 mt-2 lg:mt-0 text-white uppercase text-3xl lg:text-6xl'>{crews[index].name}</h2>
+
+            <p className=' lg:w-3/5 px-4 tracking-[2px] text-white  font-extralight text-sm/6.5'>
+              {crews[index].bio}
+            </p>
           </div>
-          <p className='w-full px-4  lg:px-0 lg:pr-34 tracking-[2px] text-white text-start font-extralight max-h-42 lg:min-h-42 text-sm/6'>
-            {crews[index].bio}
-          </p>
-          <div className='flex gap-10 justify-start w-full'>
+          <div className='flex gap-10 justify-center lg:justify-start w-full'>
             {enlaces.map(item => (
               <ElementoBoton
                 key={item.id}
@@ -71,7 +72,7 @@ function Crew() {
           </div>
         </div>
         <div className='flex flex-col col-span-2 gap-20 '>
-          <img src={imagen} alt="" className='w-3xl  absolute -top-20 right-0' />
+          <img src={imagen} alt="" className='lg:w-2xl object-contain lg:absolute lg:bottom-0 lg:right-0' />
         </div>
       </div>
     </div>

@@ -9,10 +9,10 @@ function Header() {
   const mainMenu = isMobile ? <NavBarMobile /> : isTablet ? <Navbar /> : <Navbar />
 
   return (
-    <div className='fixed top-2 lg:top-10 flex justify-end w-full items-center pl-12'>
+    <div className='fixed top-2 lg:top-10 flex justify-end w-full items-center pl-12 z-10'>
       {!isMobile && <img src={star} className='size-12 ml-12 sm:ml-2' alt="" />}
       {!isTablet && <div className='w-full h-[1px] z-1 bg-white translate-x-16'></div>}
-      <div className='w-full border border-white'> {mainMenu}</div>
+      <div className='w-full'> {mainMenu}</div>
     </div>
   )
 }
