@@ -3,8 +3,8 @@ import Navbar from './Partials/Navbar'
 import NavBarMobile from './Partials/NavBarMobile'
 import star from '../assets/star.svg'
 function Header() {
-  const isMobile = useMediaQuery({ query: '(max-width: 400px)' });
-  const isTablet = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 765px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 1240px)' });
 
   const mainMenu = isMobile ? <NavBarMobile /> : isTablet ? <Navbar /> : <Navbar />
 
