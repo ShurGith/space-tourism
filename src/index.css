@@ -6,9 +6,21 @@
   --font-main: "Open Sans", sans-serif;
   --font-space: "Bellefair", serif;
 }
+
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen;
+}
+
 .active {
   @apply border-b-4 border-white;
 }
+
 .linknav {
   @apply text-white pb-6 font-extralight;
 }
